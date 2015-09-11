@@ -1,0 +1,4 @@
+c:\users\skible\documents\visual studio 2010\Projects\KataBDD\KataBDD\bin\Debug\Elevator.dll
+c:\users\skible\documents\visual studio 2010\Projects\KataBDD\KataBDD\bin\Debug\Elevator.pdb
+c:\users\skible\documents\visual studio 2010\Projects\KataBDD\KataBDD\obj\Debug\Elevator.dll
+c:\users\skible\documents\visual studio 2010\Projects\KataBDD\KataBDD\obj\Debug\Elevator.pdb
