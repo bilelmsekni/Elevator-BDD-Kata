@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Users\SkiBLE\Documents\Visual Studio 2010\Projects\KataBDD\KataBDD\bin\Debug\Elevator.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="1" ignored="0" skipped="0" invalid="0" date="2015-09-12" time="15:46:09">
+  <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.5485" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Users\SkiBLE\Downloads\NUnit-2.6.4\NUnit-2.6.4\bin" machine-name="SKIBLE-PC" user="SkiBLE" user-domain="SkiBLE-PC" />
+  <culture-info current-culture="fr-FR" current-uiculture="fr-FR" />
+  <test-suite type="Assembly" name="C:\Users\SkiBLE\Documents\Visual Studio 2010\Projects\KataBDD\KataBDD\bin\Debug\Elevator.dll" executed="True" result="Inconclusive" success="False" time="0.389" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="Elevator" executed="True" result="Inconclusive" success="False" time="0.383" asserts="0">
+        <results>
+          <test-suite type="TestFixture" name="UseElevatorFeature" description="UseElevator" executed="True" result="Inconclusive" success="False" time="0.372" asserts="0">
+            <results>
+              <test-case name="Elevator.UseElevatorFeature.HappyElevator" description="happyElevator" executed="True" result="Inconclusive" success="False" time="0.168" asserts="0">
+                <categories>
+                  <category name="mytag" />
+                </categories>
+                <reason>
+                  <message><![CDATA[No matching step definition found for one or more steps.
+using System;
+using TechTalk.SpecFlow;
+
+namespace MyNamespace
+{
+    [Binding]
+    public class StepDefinitions
+    {
+        [Given(@"the elevator is on the ground floor")]
+        public void GivenTheElevatorIsOnTheGroundFloor()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [Given(@"I am on the ground floor")]
+        public void GivenIAmOnTheGroundFloor()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [When(@"I press GoUp")]
+        public void WhenIPressGoUp()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [Then(@"the elevator door opens")]
+        public void ThenTheElevatorDoorOpens()
+        {
+            ScenarioContext.Current.Pending();
+        }
+    }
+}
+]]></message>
+                </reason>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
