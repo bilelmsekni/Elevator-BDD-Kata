@@ -5,7 +5,9 @@ using System.Text;
 
 namespace Elevator
 {
-    interface IElevatorBox
+    public interface IElevatorBox
     {
+        void OpenDoors(int currentFloor);
+        int CurrentFloor { get; set; }
     }
 }

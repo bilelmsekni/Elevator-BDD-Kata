@@ -8,5 +8,9 @@ namespace Elevator
     class ElevatorBox : IElevatorBox
     {
         public int CurrentFloor { get; set; }
+
+        public void OpenDoors(int userFloor)
+        {          
+        }
     }
 }

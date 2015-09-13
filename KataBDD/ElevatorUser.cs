@@ -11,7 +11,7 @@ namespace Elevator
 
         internal void CallElevator(IElevatorBox elevator)
         {
-            throw new NotImplementedException();
+            elevator.OpenDoors(CurrentFloor);
         }
     }
 }

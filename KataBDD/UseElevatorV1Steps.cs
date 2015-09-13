@@ -5,7 +5,7 @@ using NSubstitute;
 namespace Elevator
 {
     [Binding]
-    public class UseElevatorSteps
+    public class UseElevatorV1Steps
     {
         IElevatorBox elevator;
         ElevatorUser user;
@@ -14,6 +14,7 @@ namespace Elevator
         public void GivenTheElevatorIsOnTheGroundFloor()
         {
             elevator = Substitute.For<IElevatorBox>();
+            elevator.CurrentFloor = 0;
         }
 
         [Given(@"I am on the ground floor")]
@@ -31,7 +32,7 @@ namespace Elevator
         [Then(@"the elevator door opens")]
         public void ThenTheElevatorDoorOpens()
         {
-            
+            elevator.ReceivedWithAnyArgs().OpenDoors(0);
         }
     }
 }

@@ -19,20 +19,20 @@ namespace Elevator
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("UseElevator")]
-    public partial class UseElevatorFeature
+    [NUnit.Framework.DescriptionAttribute("UseElevatorV1")]
+    public partial class UseElevatorV1Feature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "UseElevator.feature"
+#line 1 "UseElevatorV1.feature"
 #line hidden
         
         [NUnit.Framework.TestFixtureSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "UseElevator", "In order to go to my appartement\r\nAs a lazy Person\r\nI want to take the elevator", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "UseElevatorV1", "In order to go to my appartement\r\nAs a lazy Person\r\nI want to take the elevator", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -65,11 +65,11 @@ namespace Elevator
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("happyElevator")]
+        [NUnit.Framework.DescriptionAttribute("luckyDay")]
         [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void HappyElevator()
+        public virtual void LuckyDay()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("happyElevator", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("luckyDay", new string[] {
                         "mytag"});
 #line 7
 this.ScenarioSetup(scenarioInfo);
