@@ -6,7 +6,6 @@ C:\Users\SkiBLE\documents\visual studio 2010\Projects\KataBDD\KataBDD\bin\Debug\
 C:\Users\SkiBLE\documents\visual studio 2010\Projects\KataBDD\KataBDD\bin\Debug\nunit.framework.dll
 C:\Users\SkiBLE\documents\visual studio 2010\Projects\KataBDD\KataBDD\bin\Debug\TechTalk.SpecFlow.dll
 C:\Users\SkiBLE\documents\visual studio 2010\Projects\KataBDD\KataBDD\bin\Debug\nunit.framework.xml
-C:\Users\SkiBLE\documents\visual studio 2010\Projects\KataBDD\KataBDD\obj\Debug\Elevator.csprojResolveAssemblyReference.cache
 C:\Users\SkiBLE\documents\visual studio 2010\Projects\KataBDD\KataBDD\bin\Debug\nunit.core.interfaces.dll
 C:\Users\SkiBLE\documents\visual studio 2010\Projects\KataBDD\KataBDD\bin\Debug\NSubstitute.dll
 C:\Users\SkiBLE\documents\visual studio 2010\Projects\KataBDD\KataBDD\bin\Debug\NSubstitute.xml

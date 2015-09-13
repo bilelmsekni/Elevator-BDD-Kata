@@ -66,11 +66,11 @@ namespace Elevator
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("luckyDay")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
+        [NUnit.Framework.CategoryAttribute("version1")]
         public virtual void LuckyDay()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("luckyDay", new string[] {
-                        "mytag"});
+                        "version1"});
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
@@ -78,9 +78,9 @@ this.ScenarioSetup(scenarioInfo);
 #line 9
  testRunner.And("I am on the ground floor", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
- testRunner.When("I press GoUp", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I call elevator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
- testRunner.Then("the elevator door opens", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the elevator opens door on ground level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

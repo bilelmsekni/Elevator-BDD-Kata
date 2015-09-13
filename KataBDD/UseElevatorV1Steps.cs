@@ -13,7 +13,7 @@ namespace Elevator
         [Given(@"the elevator is on the ground floor")]
         public void GivenTheElevatorIsOnTheGroundFloor()
         {
-            elevator = Substitute.For<IElevatorBox>();
+            elevator = Substitute.ForPartsOf<ElevatorBox>();
             elevator.CurrentFloor = 0;
         }
 
@@ -23,16 +23,16 @@ namespace Elevator
             user = new ElevatorUser { CurrentFloor = 0 };
         }
 
-        [When(@"I press GoUp")]
-        public void WhenIPressGoUp()
+        [When(@"I call elevator")]
+        public void WhenICallElevator()
         {
             user.CallElevator(elevator);
         }
 
-        [Then(@"the elevator door opens")]
-        public void ThenTheElevatorDoorOpens()
+        [Then(@"the elevator opens door on ground level")]
+        public void ThenTheElevatorDoorOpensDoorOnGroundLevel()
         {
-            elevator.ReceivedWithAnyArgs().OpenDoors(0);
+            elevator.Received(1).OpenDoors(Arg.Is<int>(0));
         }
     }
 }

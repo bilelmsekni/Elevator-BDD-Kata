@@ -3,9 +3,9 @@
 	As a lazy Person
 	I want to take the elevator
 
-@mytag
+@version1
 Scenario: luckyDay
 	Given the elevator is on the ground floor	
 	And I am on the ground floor
-	When I press GoUp
-	Then the elevator door opens
+	When I call elevator
+	Then the elevator opens door on ground level

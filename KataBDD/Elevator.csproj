@@ -66,6 +66,12 @@
       <DependentUpon>UseElevatorV1.feature</DependentUpon>
     </Compile>
     <Compile Include="UseElevatorV1Steps.cs" />
+    <Compile Include="UseElevatorV2.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UseElevatorV2.feature</DependentUpon>
+    </Compile>
+    <Compile Include="UseElevatorV2Steps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -73,6 +79,10 @@
     <None Include="UseElevatorV1.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>UseElevatorV1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="UseElevatorV2.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>UseElevatorV2.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

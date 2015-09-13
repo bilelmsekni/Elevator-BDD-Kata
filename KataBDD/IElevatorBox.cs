@@ -7,7 +7,9 @@ namespace Elevator
 {
     public interface IElevatorBox
     {
-        void OpenDoors(int currentFloor);
+        void OpenDoors(int floorLevel);
+        void Operate(int floorLevel);
         int CurrentFloor { get; set; }
+        List<int> CallingFloors { get; set; }
     }
 }

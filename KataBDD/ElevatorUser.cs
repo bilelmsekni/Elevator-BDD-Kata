@@ -9,9 +9,9 @@ namespace Elevator
     {
         public int CurrentFloor { get; set; }
 
-        internal void CallElevator(IElevatorBox elevator)
+        public void CallElevator(IElevatorBox elevator)
         {
-            elevator.OpenDoors(CurrentFloor);
+            elevator.Operate(CurrentFloor);
         }
     }
 }
