@@ -17,7 +17,6 @@ namespace Elevator
         {
             elevator = Substitute.ForPartsOf<ElevatorBox>();
             elevator.CurrentFloor = 0;
-
         }
 
         [Scope(Feature = "UseElevatorV2")]
@@ -25,6 +24,16 @@ namespace Elevator
         public void GivenIAmOnTheGroundFloor()
         {
             user = new ElevatorUser { CurrentFloor = 0 };
+        }
+
+        [Given(@"a call for third floor is registered")]
+        public void GivenACallForThirdFloorIsRegistered()
+        {
+            if (elevator.CallingFloors == null)
+            {
+                elevator.CallingFloors = new List<int>();
+            }
+            elevator.CallingFloors.Add(3);
         }
 
         [Scope(Feature = "UseElevatorV2")]
@@ -38,7 +47,11 @@ namespace Elevator
         [Given(@"a call for underground floor is registered")]
         public void GivenACallForUndergroundFloorIsRegistered()
         {
-            elevator.CallingFloors = new List<int> { -1 };
+            if (elevator.CallingFloors == null)
+            {
+                elevator.CallingFloors = new List<int>();
+            }
+            elevator.CallingFloors.Add(-1);
         }
 
         [Scope(Feature = "UseElevatorV2")]

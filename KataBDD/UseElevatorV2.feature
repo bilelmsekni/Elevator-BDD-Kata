@@ -11,6 +11,7 @@ Scenario: luckyDayEnhanced
 	When I call elevator
 	Then the elevator opens door on ground level
 
+@version2
 Scenario: badNeighbour
 	Given I am on the ground floor
 	And the elevator is on the ground floor
@@ -18,3 +19,21 @@ Scenario: badNeighbour
 	When I call elevator
 	Then the elevator opens door on underground level
 	And the elevator opens door on ground level
+
+@version2
+Scenario: PoorNeighbour
+	Given I am on the ground floor
+	And the elevator is on the ground floor
+	And a call for third floor is registered
+	When I call elevator
+	Then the elevator opens door on ground level
+
+@version2
+	Scenario: PoorAndBadNeighbour
+	Given I am on the ground floor
+	And the elevator is on the ground floor
+	And a call for third floor is registered
+	And a call for underground floor is registered
+	When I call elevator
+	Then the elevator opens door on underground level
+	Then the elevator opens door on ground level
