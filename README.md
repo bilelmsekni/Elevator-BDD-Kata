@@ -25,6 +25,9 @@ Table of Contents
 
    https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx
 
+1.2. Adding Visual Studio extensions
+--------------------------------
+
 * SpecFlow extension adds to visual studio the necessary BDD project templates:
 
    Open Visual Studio and go to Tools > Extension Manager.
@@ -41,7 +44,10 @@ Table of Contents
    Open Visual Studio and go to Tools > Extension Manager.
    
    Search for NuGet extension and add it.
-  
+
+1.3. Creating the test project
+---------------------------
+
 * Finally, create a new library project and add reference to the following packages via Nuget Manager console:
 
    Open Visual Studio and go to Tools > NuGet package manager > NuGet package manager console and type these commands.
