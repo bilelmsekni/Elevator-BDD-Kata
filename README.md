@@ -18,7 +18,7 @@ Table of Contents
 1. Preparing your machine
 ===============
 
-2.1. Installing Visual Studio
+1.1. Installing Visual Studio
 -----------------
 
 * Download visual studio installation from the link below and install it on your machine:
