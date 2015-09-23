@@ -11,9 +11,7 @@ Table of Contents
   3. Understanding solution
   4. Licensing
   5. Contacts
-  6. Acknowledgement
-  7. Credits
-  8. To do
+  6. To do
 
 1. Preparing your machine
 ===============
@@ -55,3 +53,36 @@ Table of Contents
    Install-Package NUnit
    
    Install-Package NSubstitue
+   
+   2. Elevator Kata
+===============
+
+You company is looking to build a software for their high tech elevator. You have been assigned to write the program based on specifications written by your colleagues. The expected behaviour of the elevator is as following:
+
+- The building has 5 floors and an underground level.
+- Elevator must open doors on every calling floor if it's going up.
+- Elevator must open doors on every calling floor if it's going down.
+- Elevator can not change his direction until all calling floors on it's way have been served.
+- Elevator can not work if its door is still open.
+- Elevator can not work if its total weight exceeds 300 kg
+
+   3. Understanding the solution
+===============
+
+   4. Licensing
+===============
+
+Elevator KataBDD is licensed under a Creative Commons Attribution 3.0 Unported License.
+
+http://i.imgur.com/4XWrp.png
+To view a copy of this license, visit [ http://creativecommons.org/licenses/by/3.0/deed.en_US ].
+
+   5. Contacts
+===============
+
+Bilel Msekni (msekni.bilel@gmail.com)
+
+   5. To do
+===============
+
+Do the BDD in other languages such as Java ...
