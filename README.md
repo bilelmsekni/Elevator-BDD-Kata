@@ -21,11 +21,11 @@ Table of Contents
 2.1. Installing Visual Studio
 -----------------
 
-* Download visual studio installation from the link below and install it on your machine::
+* Download visual studio installation from the link below and install it on your machine:
 
    https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx
 
-* SpecFlow extension adds to visual studio the necessary BDD project templates::
+* SpecFlow extension adds to visual studio the necessary BDD project templates:
 
    Open Visual Studio and go to Tools > Extension Manager.
    Search for SpecFlow extension and add it.
