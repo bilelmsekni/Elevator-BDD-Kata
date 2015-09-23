@@ -25,7 +25,7 @@ Table of Contents
 
    https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx
 
-* SpecFlow extension is necessary for visual studio to add BDD feature templates::
+* SpecFlow extension adds to visual studio the necessary BDD project templates::
 
-   Open Visual Studio and then go to Tools > Extension Manager
-   Search for SpecFlow extension and add it to visual studio
+   Open Visual Studio and go to Tools > Extension Manager.
+   Search for SpecFlow extension and add it.
