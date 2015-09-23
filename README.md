@@ -29,3 +29,23 @@ Table of Contents
 
    Open Visual Studio and go to Tools > Extension Manager.
    Search for SpecFlow extension and add it.
+
+* Because we will be using Nunit, it will be useful to add Nunit test adapter extension to visual studio in order to run tests from within the test explorer:
+
+   Open Visual Studio and go to Tools > Extension Manager.
+   
+   Search for NUnit test adapter extension and add it.
+
+* NuGet package manager is also essential to get the required references for our project:
+
+   Open Visual Studio and go to Tools > Extension Manager.
+   
+   Search for NuGet extension and add it.
+  
+* Finally, create a new library project and add reference to the following packages via Nuget Manager console:
+
+   Open Visual Studio and go to Tools > NuGet package manager > NuGet package manager console and type these commands.
+
+   Install-Package NUnit
+   
+   Install-Package NSubstitue
