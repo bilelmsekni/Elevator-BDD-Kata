@@ -74,7 +74,8 @@ You company is looking to build a software for their high tech elevator. You hav
 
 Elevator KataBDD is licensed under a Creative Commons Attribution 3.0 Unported License.
 
-http://i.imgur.com/4XWrp.png
+![ScreenShot](http://i.imgur.com/4XWrp.png)
+
 To view a copy of this license, visit [ http://creativecommons.org/licenses/by/3.0/deed.en_US ].
 
    5. Contacts
@@ -82,7 +83,7 @@ To view a copy of this license, visit [ http://creativecommons.org/licenses/by/3
 
 Bilel Msekni (msekni.bilel@gmail.com)
 
-   5. To do
+   6. To do
 ===============
 
 Do the BDD in other languages such as Java ...
