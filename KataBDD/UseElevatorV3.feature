@@ -20,3 +20,4 @@ Scenario: PoorAndBadNeighbour
 	When I call elevator
 	Then the elevator opens door on -1 level
 	Then the elevator opens door on 0 level
+

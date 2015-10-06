@@ -13,5 +13,9 @@ namespace Elevator
         {
             elevator.Operate(CurrentFloor);
         }
+
+        public string Name { get; set; }
+
+        public int GoingToFloor { get; set; }
     }
 }
