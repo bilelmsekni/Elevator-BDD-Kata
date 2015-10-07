@@ -1,5 +1,6 @@
 ﻿using System;
 using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
 using System.Collections.Generic;
 using NSubstitute;
 
@@ -19,19 +20,20 @@ namespace Elevator
         [Given(@"the following elevator users:")]
         public void GivenTheFollowingElevatorUsers(Table table)
         {
-            var users = new List<ElevatorUser>();
-            for (int i = 0; i < table.RowCount; i++)
-            {
-                var userName = table.Rows[i]["User"];
-                var userFloor = int.Parse(table.Rows[i]["CurrentFloor"]);
-                var userGoingToFloor = int.Parse(table.Rows[i]["GoingTo"]);
-                users.Add(new ElevatorUser
-                {
-                    Name = userName,
-                    CurrentFloor = userFloor,
-                    GoingToFloor = userGoingToFloor
-                });
-            }
+            var users  = table.CreateSet<ElevatorUser>();
+
+            //for (int i = 0; i < table.RowCount; i++)
+            //{
+            //    var userName = table.Rows[i]["User"];
+            //    var userFloor = int.Parse(table.Rows[i]["CurrentFloor"]);
+            //    var userGoingToFloor = int.Parse(table.Rows[i]["GoingTo"]);
+            //    users.Add(new ElevatorUser
+            //    {
+            //        Name = userName,
+            //        CurrentFloor = userFloor,
+            //        GoingTo = userGoingToFloor
+            //    });
+            //}
             foreach (var user in users)
             {
                 user.CallElevator(elevator);

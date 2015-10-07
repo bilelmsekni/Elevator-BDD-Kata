@@ -8,7 +8,7 @@ Scenario: MultipleUsers
 	Given the elevator is on the 0 floor
 	
 	And the following elevator users:
-	| User   | CurrentFloor | GoingTo |
+	| Name   | CurrentFloor | GoingTo |
 	| Matt   | 1             | 0       |
 	| Bilel  | 0             | 3       |
 	| Emily  | 3             | 0       |

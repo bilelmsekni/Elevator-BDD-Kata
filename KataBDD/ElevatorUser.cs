@@ -16,6 +16,6 @@ namespace Elevator
 
         public string Name { get; set; }
 
-        public int GoingToFloor { get; set; }
+        public int GoingTo { get; set; }
     }
 }
