@@ -44,3 +44,9 @@ Temporary Items
 *.suo
 *.dll
 *.pdb
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+packages
