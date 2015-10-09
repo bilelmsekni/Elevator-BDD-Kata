@@ -32,8 +32,8 @@ namespace Elevator
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "UseElevatorV4", "In order to avoid silly mistakes\r\nAs a math idiot\r\nI want to be told the sum of t" +
-                    "wo numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "UseElevatorV4", "In order to test my elevator\r\nAs a manufacturer\r\nI want to have multiple users wi" +
+                    "th different needs", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -65,6 +65,12 @@ namespace Elevator
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 6
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("MultipleUsers")]
         [NUnit.Framework.CategoryAttribute("version4")]
@@ -72,10 +78,10 @@ namespace Elevator
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("MultipleUsers", new string[] {
                         "version4"});
-#line 7
+#line 9
 this.ScenarioSetup(scenarioInfo);
-#line 8
- testRunner.Given("the elevator is on the 0 floor", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 6
+this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Name",
@@ -106,6 +112,59 @@ this.ScenarioSetup(scenarioInfo);
                         "3"});
 #line 16
  testRunner.Then("the elevator will open its door in this order:", ((string)(null)), table2, "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("MultipleUsersWithDifferentNeeds")]
+        [NUnit.Framework.CategoryAttribute("version4")]
+        public virtual void MultipleUsersWithDifferentNeeds()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("MultipleUsersWithDifferentNeeds", new string[] {
+                        "version4"});
+#line 23
+ this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 24
+ testRunner.Given("the elevator is on the 0 floor", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Name",
+                        "CurrentFloor",
+                        "GoingTo"});
+            table3.AddRow(new string[] {
+                        "Matt",
+                        "1",
+                        "2"});
+            table3.AddRow(new string[] {
+                        "Bilel",
+                        "0",
+                        "3"});
+            table3.AddRow(new string[] {
+                        "Emily",
+                        "-1",
+                        "2"});
+#line 26
+ testRunner.And("the following elevator users:", ((string)(null)), table3, "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Floor"});
+            table4.AddRow(new string[] {
+                        "1"});
+            table4.AddRow(new string[] {
+                        "2"});
+            table4.AddRow(new string[] {
+                        "0"});
+            table4.AddRow(new string[] {
+                        "-1"});
+            table4.AddRow(new string[] {
+                        "2"});
+            table4.AddRow(new string[] {
+                        "3"});
+#line 32
+ testRunner.Then("the elevator will open its door in this order:", ((string)(null)), table4, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -11,11 +11,16 @@ namespace Elevator
 
         public void CallElevator(IElevatorBox elevator)
         {
-            elevator.Operate(CurrentFloor);
+            elevator.RegisterFloorRequest(CurrentFloor);
         }
 
         public string Name { get; set; }
 
         public int GoingTo { get; set; }
+
+        public void RequestFloor(IElevatorBox elevator)
+        {
+            elevator.RegisterFloorRequest(GoingTo);
+        }
     }
 }

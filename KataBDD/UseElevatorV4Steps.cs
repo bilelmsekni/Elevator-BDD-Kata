@@ -37,6 +37,11 @@ namespace Elevator
             foreach (var user in users)
             {
                 user.CallElevator(elevator);
+                while (elevator.CurrentFloor != user.CurrentFloor)
+                {
+                    //waiting
+                }
+                user.RequestFloor(elevator);
             }
         }
         

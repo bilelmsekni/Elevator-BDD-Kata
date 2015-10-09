@@ -1,37 +1,83 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Elevator
 {
+    public enum MovingDirection
+    {
+        GoingUp,
+        GoingDown,
+        NotMoving
+    }
+
     public class ElevatorBox : IElevatorBox
     {
         public int CurrentFloor { get; set; }
         public List<int> CallingFloors { get; set; }
+        List<int> upperFloors = new List<int>(7);
+        List<int> lowerFloors = new List<int>(7);
 
-        public void Operate(int userFloor)
+        MovingDirection elevatorDirection;
+
+        public void Operate()
         {
-            var filteredCallingFloors = new List<int> { userFloor };
-            if (CallingFloors != null && CallingFloors.Count > 0)
+            if (elevatorDirection != MovingDirection.NotMoving)
             {
-                foreach (var floorLevel in CallingFloors)
+                if (elevatorDirection == MovingDirection.GoingUp)
                 {
-                    if (floorLevel < userFloor)
+                    foreach (var upperFloor in upperFloors)
                     {
-                        filteredCallingFloors.Add(floorLevel);
+                        OpenDoors(upperFloor);
                     }
+                    upperFloors.Clear();
                 }
-            }
-
-            foreach (var callingFloor in filteredCallingFloors)
-            {
-                OpenDoors(callingFloor);
+                else if (elevatorDirection == MovingDirection.GoingDown)
+                {
+                    foreach (var lowerFloor in lowerFloors)
+                    {
+                        OpenDoors(lowerFloor);
+                    }
+                    lowerFloors.Clear();
+                }
+                UpdateMovingDirection();
             }
         }
 
+        private void UpdateMovingDirection()
+        {
+            if (lowerFloors.Count > 0)
+            {
+                elevatorDirection = MovingDirection.GoingDown;
+            }
+            else if (upperFloors.Count > 0)
+            {
+                elevatorDirection = MovingDirection.GoingUp;
+            }
+            else
+            {
+                elevatorDirection = MovingDirection.NotMoving;
+            }
+            Operate();
+        }
+
+        public void RegisterFloorRequest(int goingTo)
+        {
+            if (CurrentFloor < goingTo)
+            {
+                upperFloors.Add(goingTo);
+            }
+            else if (CurrentFloor > goingTo)
+            {
+                lowerFloors.Add(goingTo);
+            }
+            else
+            {
+                OpenDoors(goingTo);
+            }
+            Operate();
+        }
+
         public virtual void OpenDoors(int floorLevel)
-        {            
+        {
         }
     }
 }
