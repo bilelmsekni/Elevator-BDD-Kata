@@ -29,29 +29,21 @@ namespace Elevator
         [Given(@"a call for third floor is registered")]
         public void GivenACallForThirdFloorIsRegistered()
         {
-            if (elevator.CallingFloors == null)
-            {
-                elevator.CallingFloors = new List<int>();
-            }
-            elevator.CallingFloors.Add(3);
+            elevator.RegisterFloorRequest(3);
         }
 
         [Scope(Feature = "UseElevatorV2")]
-        [Given(@"no call for underground floor is registered")]
-        public void GivenNoCallForUndergroundFloorIsRegistered()
+        [Given(@"no call for elevator is registered")]
+        public void GivenNoCallForElevatorIsRegistered()
         {
-            elevator.CallingFloors = new List<int>();
+            elevator.ElevatorState = ElevatorState.Stopped;
         }
 
         [Scope(Feature = "UseElevatorV2")]
         [Given(@"a call for underground floor is registered")]
         public void GivenACallForUndergroundFloorIsRegistered()
         {
-            if (elevator.CallingFloors == null)
-            {
-                elevator.CallingFloors = new List<int>();
-            }
-            elevator.CallingFloors.Add(-1);
+            elevator.RegisterFloorRequest(-1);
         }
 
         [Scope(Feature = "UseElevatorV2")]
@@ -72,6 +64,13 @@ namespace Elevator
         public void ThenTheElevatorDoorOpensDoorOnGroundLevel()
         {
             elevator.Received(1).OpenDoors(Arg.Is<int>(0));
+        }
+
+        [Scope(Feature = "UseElevatorV2")]
+        [Then(@"the elevator opens door on third level")]
+        public void ThenTheElevatorDoorOpensDoorOnThirdLevel()
+        {
+            elevator.Received(1).OpenDoors(Arg.Is<int>(3));
         }
     }
 }

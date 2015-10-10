@@ -30,18 +30,14 @@ namespace Elevator
         [Given(@"no call for underground floor is registered")]
         public void GivenNoCallForUndergroundFloorIsRegistered()
         {
-            elevator.CallingFloors = new List<int>();
+            elevator.ElevatorState = ElevatorState.Stopped;
         }
 
         [Scope(Feature = "UseElevatorV3")]
         [Given(@"a call for (.*) floor is registered")]
         public void GivenACallForXFloorIsRegistered(int callingLevel)
         {
-            if (elevator.CallingFloors == null)
-            {
-                elevator.CallingFloors = new List<int>();
-            }
-            elevator.CallingFloors.Add(callingLevel);
+            elevator.RegisterFloorRequest(callingLevel);
         }
 
         [Scope(Feature = "UseElevatorV3")]

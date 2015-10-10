@@ -1,14 +1,10 @@
-﻿using System.Collections.Generic;
-
-namespace Elevator
+﻿namespace Elevator
 {
     public interface IElevatorBox
     {
-        void OpenDoors(int floorLevel);
-        void Operate();
+        void OpenDoors(int floorLevel);        
         int CurrentFloor { get; set; }
-        List<int> CallingFloors { get; set; }
-
         void RegisterFloorRequest(int goingTo);
+        ElevatorState ElevatorState { get; set; }
     }
 }

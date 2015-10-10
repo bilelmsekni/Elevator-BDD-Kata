@@ -7,7 +7,7 @@
 Scenario: luckyDayEnhanced
 	Given I am on the ground floor
 	And the elevator is on the ground floor
-	And no call for underground floor is registered 
+	And no call for elevator is registered 
 	When I call elevator
 	Then the elevator opens door on ground level
 
@@ -37,3 +37,4 @@ Scenario: PoorNeighbour
 	When I call elevator
 	Then the elevator opens door on underground level
 	Then the elevator opens door on ground level
+	Then the elevator opens door on third level

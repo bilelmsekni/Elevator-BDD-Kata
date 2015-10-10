@@ -10,6 +10,7 @@ namespace Elevator
     public class UseElevatorV4Steps
     {
         IElevatorBox elevator;
+
         [Given(@"the elevator is on the (.*) floor")]
         public void GivenTheElevatorIsOnTheFloor(int currentFloor)
         {
@@ -17,7 +18,7 @@ namespace Elevator
             elevator.CurrentFloor = currentFloor;
         }
 
-        [Given(@"the following elevator users:")]
+        [When(@"the following elevator users:")]
         public void GivenTheFollowingElevatorUsers(Table table)
         {
             var users  = table.CreateSet<ElevatorUser>();
@@ -37,20 +38,17 @@ namespace Elevator
             foreach (var user in users)
             {
                 user.CallElevator(elevator);
-                while (elevator.CurrentFloor != user.CurrentFloor)
-                {
-                    //waiting
-                }
                 user.RequestFloor(elevator);
             }
         }
-        
+
         [Then(@"the elevator will open its door in this order:")]
         public void ThenTheElevatorWillOpenItsDoorInThisOrder(Table table)
         {
-            elevator.Received(1).OpenDoors(1);
-            elevator.Received(1).OpenDoors(0);
-            elevator.Received(1).OpenDoors(3);
+            for (int i = 0; i < table.RowCount; i++)
+            {
+                elevator.Received(1).OpenDoors(int.Parse(table.Rows[i]["Floor"]));
+            }
         }
     }
 }

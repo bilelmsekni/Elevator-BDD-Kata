@@ -2,27 +2,26 @@
 
 namespace Elevator
 {
-    public enum MovingDirection
+    public enum ElevatorState
     {
+        Stopped,
         GoingUp,
-        GoingDown,
-        NotMoving
+        GoingDown
     }
 
     public class ElevatorBox : IElevatorBox
     {
         public int CurrentFloor { get; set; }
-        public List<int> CallingFloors { get; set; }
         List<int> upperFloors = new List<int>(7);
         List<int> lowerFloors = new List<int>(7);
 
-        MovingDirection elevatorDirection;
+        public ElevatorState ElevatorState { get; set; }
 
         public void Operate()
         {
-            if (elevatorDirection != MovingDirection.NotMoving)
+            if (ElevatorState != ElevatorState.Stopped)
             {
-                if (elevatorDirection == MovingDirection.GoingUp)
+                if (ElevatorState == ElevatorState.GoingUp)
                 {
                     foreach (var upperFloor in upperFloors)
                     {
@@ -30,7 +29,7 @@ namespace Elevator
                     }
                     upperFloors.Clear();
                 }
-                else if (elevatorDirection == MovingDirection.GoingDown)
+                else if (ElevatorState == ElevatorState.GoingDown)
                 {
                     foreach (var lowerFloor in lowerFloors)
                     {
@@ -38,23 +37,23 @@ namespace Elevator
                     }
                     lowerFloors.Clear();
                 }
-                UpdateMovingDirection();
+                UpdateElevatorState();
             }
         }
 
-        private void UpdateMovingDirection()
+        private void UpdateElevatorState()
         {
             if (lowerFloors.Count > 0)
             {
-                elevatorDirection = MovingDirection.GoingDown;
+                ElevatorState = ElevatorState.GoingDown;
             }
             else if (upperFloors.Count > 0)
             {
-                elevatorDirection = MovingDirection.GoingUp;
+                ElevatorState = ElevatorState.GoingUp;
             }
             else
             {
-                elevatorDirection = MovingDirection.NotMoving;
+                ElevatorState = ElevatorState.Stopped;
             }
             Operate();
         }
@@ -73,7 +72,7 @@ namespace Elevator
             {
                 OpenDoors(goingTo);
             }
-            Operate();
+            UpdateElevatorState();
         }
 
         public virtual void OpenDoors(int floorLevel)

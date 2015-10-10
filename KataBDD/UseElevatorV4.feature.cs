@@ -67,7 +67,9 @@ namespace Elevator
         
         public virtual void FeatureBackground()
         {
-#line 6
+#line 7
+ #line 8
+ testRunner.Given("the elevator is on the 0 floor", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
         
@@ -78,10 +80,10 @@ namespace Elevator
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("MultipleUsers", new string[] {
                         "version4"});
-#line 9
+#line 11
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
+#line 7
+ this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Name",
@@ -92,15 +94,15 @@ this.FeatureBackground();
                         "1",
                         "0"});
             table1.AddRow(new string[] {
-                        "Bilel",
+                        "Scott",
                         "0",
                         "3"});
             table1.AddRow(new string[] {
                         "Emily",
                         "3",
                         "0"});
-#line 10
- testRunner.And("the following elevator users:", ((string)(null)), table1, "And ");
+#line 12
+ testRunner.When("the following elevator users:", ((string)(null)), table1, "When ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "Floor"});
@@ -110,7 +112,7 @@ this.FeatureBackground();
                         "0"});
             table2.AddRow(new string[] {
                         "3"});
-#line 16
+#line 18
  testRunner.Then("the elevator will open its door in this order:", ((string)(null)), table2, "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -123,12 +125,10 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("MultipleUsersWithDifferentNeeds", new string[] {
                         "version4"});
-#line 23
- this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 24
- testRunner.Given("the elevator is on the 0 floor", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 25
+this.ScenarioSetup(scenarioInfo);
+#line 7
+ this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                         "Name",
@@ -139,15 +139,15 @@ this.FeatureBackground();
                         "1",
                         "2"});
             table3.AddRow(new string[] {
-                        "Bilel",
+                        "Scott",
                         "0",
                         "3"});
             table3.AddRow(new string[] {
                         "Emily",
                         "-1",
                         "2"});
-#line 26
- testRunner.And("the following elevator users:", ((string)(null)), table3, "And ");
+#line 27
+ testRunner.When("the following elevator users:", ((string)(null)), table3, "When ");
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "Floor"});
@@ -163,7 +163,7 @@ this.FeatureBackground();
                         "2"});
             table4.AddRow(new string[] {
                         "3"});
-#line 32
+#line 33
  testRunner.Then("the elevator will open its door in this order:", ((string)(null)), table4, "Then ");
 #line hidden
             this.ScenarioCleanup();
