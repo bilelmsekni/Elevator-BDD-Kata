@@ -9,6 +9,7 @@ Scenario: ParametrizedDays
 	And the elevator is on the 0 floor
 	And no call for underground floor is registered 
 	When I call elevator
+	And the elevator operates
 	Then the elevator opens door on 0 level
 
 @version3
@@ -18,6 +19,7 @@ Scenario: PoorAndBadNeighbour
 	And a call for 3 floor is registered
 	And a call for -1 floor is registered
 	When I call elevator
+	And the elevator operates
 	Then the elevator opens door on -1 level
 	Then the elevator opens door on 0 level
 	Then the elevator opens door on 3 level

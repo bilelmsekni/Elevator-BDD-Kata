@@ -53,6 +53,13 @@ namespace Elevator
             user.CallElevator(elevator);
         }
 
+        [Scope(Feature = "UseElevatorV2")]
+        [When(@"the elevator operates")]
+        public void WhenTheElevatorOperates()
+        {
+            elevator.Operate();
+        }
+
         [Then(@"the elevator opens door on underground level")]
         public void ThenTheElevatorOpensDoorOnUndergroundLevel()
         {

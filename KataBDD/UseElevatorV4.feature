@@ -14,7 +14,7 @@ Scenario: MultipleUsers
 	| Matt   | 1             | 0       |
 	| Scott  | 0             | 3       |
 	| Emily  | 3             | 0       |
-
+	And the elevator operates
 	Then the elevator will open its door in this order:
 	| Floor |
 	| 1     |
@@ -29,7 +29,7 @@ Scenario: MultipleUsersWithDifferentNeeds
 	| Matt   | 1             | 2       |
 	| Scott  | 0             | 3       |
 	| Emily  | -1            | 2       |
-
+	And the elevator operates
 	Then the elevator will open its door in this order:
 	| Floor |
 	| 1     |

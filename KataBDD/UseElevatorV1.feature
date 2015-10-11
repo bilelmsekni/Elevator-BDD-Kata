@@ -8,4 +8,5 @@ Scenario: luckyDay
 	Given the elevator is on the ground floor	
 	And I am on the ground floor
 	When I call elevator
+	And the elevator operates
 	Then the elevator opens door on ground level

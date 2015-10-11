@@ -12,8 +12,8 @@ namespace Elevator
     public class ElevatorBox : IElevatorBox
     {
         public int CurrentFloor { get; set; }
-        List<int> upperFloors = new List<int>(7);
-        List<int> lowerFloors = new List<int>(7);
+        SortedSet<int> upperFloors = new SortedSet<int>();
+        SortedSet<int> lowerFloors = new SortedSet<int>(new DescendingSort());        
 
         public ElevatorState ElevatorState { get; set; }
 
@@ -59,20 +59,19 @@ namespace Elevator
         }
 
         public void RegisterFloorRequest(int goingTo)
-        {
-            if (CurrentFloor < goingTo)
+        {            
+            if (CurrentFloor <= goingTo)
             {
                 upperFloors.Add(goingTo);
+                if (ElevatorState == ElevatorState.Stopped)
+                    ElevatorState = ElevatorState.GoingUp;
             }
             else if (CurrentFloor > goingTo)
             {
                 lowerFloors.Add(goingTo);
-            }
-            else
-            {
-                OpenDoors(goingTo);
-            }
-            UpdateElevatorState();
+                if (ElevatorState == ElevatorState.Stopped)
+                    ElevatorState = ElevatorState.GoingDown;
+            }  
         }
 
         public virtual void OpenDoors(int floorLevel)

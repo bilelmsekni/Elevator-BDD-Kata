@@ -53,5 +53,12 @@ namespace Elevator
         {
             elevator.Received(1).OpenDoors(Arg.Is<int>(openDoorLevel));
         }
+
+        [Scope(Feature = "UseElevatorV3")]
+        [When(@"the elevator operates")]
+        public void WhenTheElevatorOperates()
+        {
+            elevator.Operate();
+        }
     }
 }

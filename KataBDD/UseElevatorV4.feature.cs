@@ -103,6 +103,8 @@ this.ScenarioSetup(scenarioInfo);
                         "0"});
 #line 12
  testRunner.When("the following elevator users:", ((string)(null)), table1, "When ");
+#line 17
+ testRunner.And("the elevator operates", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "Floor"});
@@ -148,6 +150,8 @@ this.ScenarioSetup(scenarioInfo);
                         "2"});
 #line 27
  testRunner.When("the following elevator users:", ((string)(null)), table3, "When ");
+#line 32
+ testRunner.And("the elevator operates", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "Floor"});

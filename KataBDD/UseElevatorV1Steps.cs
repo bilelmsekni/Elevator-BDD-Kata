@@ -29,6 +29,12 @@ namespace Elevator
             user.CallElevator(elevator);
         }
 
+        [When(@"the elevator operates")]
+        public void WhenTheElevatorOperates()
+        {
+            elevator.Operate();
+        }
+
         [Then(@"the elevator opens door on ground level")]
         public void ThenTheElevatorDoorOpensDoorOnGroundLevel()
         {
