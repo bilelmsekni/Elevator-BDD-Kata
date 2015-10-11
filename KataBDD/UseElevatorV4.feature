@@ -1,7 +1,7 @@
 ﻿Feature: UseElevatorV4
-	In order to test my elevator
-	As a manufacturer
-	I want to have multiple users with different needs
+	In order to go to my appartment
+	As a lazy person
+	I want to use the elevator
 	
 	
 	Background: 
