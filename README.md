@@ -37,12 +37,6 @@ Table of Contents
    
    Search for NUnit test adapter extension and add it.
 
-* NuGet package manager is also essential to get the required references for our project:
-
-   Open Visual Studio and go to Tools > Extension Manager.
-   
-   Search for NuGet extension and add it.
-
 1.3. Creating the test project
 ---------------------------
 
@@ -59,15 +53,43 @@ Table of Contents
 
 You company is looking to build a software for their high tech elevator. You have been assigned to write the program based on specifications written by your colleagues. The expected behaviour of the elevator is as following:
 
-- The building has 5 floors and an underground level.
-- Elevator must open doors on every calling floor if it's going up.
-- Elevator must open doors on every calling floor if it's going down.
+- The building has 6 floors and an underground level.
+- Elevator must open doors on every calling floor above it's current level if it's going up.
+- Elevator must open doors on every calling floor below it's current level if it's going down.
 - Elevator can not change his direction until all calling floors on it's way have been served.
 - Elevator can not work if its door is still open.
 - Elevator can not work if its total weight exceeds 300 kg
 
+Examples:
+
+	Given the elevator is on the 0 floor
+	 And Matt wants to take elevator from 0 floor to 3 floor
+	 And Emily wants to take elevator from 2 floor to -1 floor	 	
+	When the elevator operates
+	Then the elevator opens doors respectively on 0, 2, 3, -1 floors
+
+	Given the elevator is on the 3 floor
+	 And Matt wants to take elevator from 2 floor to 0 floor
+	 And Emily wants to take elevator from 0 floor to 1 floor	 	
+	When the elevator operates
+	Then the elevator opens doors respectively on 2, 0, 1 floors
+	
+	Given the elevator is on the 0 floor
+	 And Matt wants to take elevator from -1 floor to 2 floor
+	 And Emily wants to take elevator from 3 floor to 6 floor	 	
+	When the elevator operates
+	Then the elevator opens doors respectively on -1, 2, 3, 6 floors
+	
    3. Understanding the solution
 ===============
+
+- UseElevatorV1: Create your first feature, generate the steps and check if the test runs ok.
+- UseElevatorV2: Write multiple scenarios and notice how the same steps can share their implementation. Change step scope if necessary.
+- UseElevatorV3: Use parameters to reduce the quantity of written code and avoid unecessary duplication
+- UseElevatorV4: Demonstrate how tables and its helpers can be used. Notice the background setup for the feature.
+- UseElevatorV5: Use the scenario outline to make a more clear concept and reduce code amount.
+- TBD: SpecFlow has hooks (methods can be executed before/after a scenario/feature)
+- TBD: DataSharing in specFlow can be done through 3 ways: Instance fields, scenario context and dependency injection
 
    4. Licensing
 ===============
