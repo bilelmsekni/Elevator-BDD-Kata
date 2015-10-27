@@ -28,14 +28,14 @@ Table of Contents
 
 * SpecFlow extension adds to visual studio the necessary BDD project templates:
 
-   Open Visual Studio and go to Tools > Extension and Updates.
-   Search for SpecFlow extension on the online visual studio gallery and add it.
+   Open Visual Studio and go to Tools > Extensions and Updates.
+   Search for SpecFlow on the online visual studio gallery and add it.
 
 * Because we will be using Nunit, it will be useful to add Nunit test adapter extension to visual studio in order to run tests from within the test explorer:
 
-   Open Visual Studio and go to Tools > Extension Manager.
+   Open Visual Studio and go to Tools > Extensions and Updates.
    
-   Search for NUnit test adapter extension and add it.
+   Search for NUnit test adapter on the online gallery and add it.
 
 1.3. Creating the test project
 ---------------------------
@@ -46,7 +46,7 @@ Table of Contents
 
    Install-Package NUnit
    
-   Install-Package NSubstitue
+   Install-Package NSubstitute
    
    2. Elevator Kata
 ===============
