@@ -34,7 +34,6 @@ Table of Contents
 * Because we will be using Nunit, it will be useful to add Nunit test adapter extension to visual studio in order to run tests from within the test explorer:
 
    Open Visual Studio and go to Tools > Extensions and Updates.
-   
    Search for NUnit test adapter on the online gallery and add it.
 
 1.3. Creating the test project
