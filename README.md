@@ -47,6 +47,8 @@ Table of Contents
    
    Install-Package NSubstitute
    
+   Install-Package SpecFlow
+   
    2. Elevator Kata
 ===============
 
