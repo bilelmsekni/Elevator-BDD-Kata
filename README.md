@@ -13,7 +13,7 @@ Table of Contents
   5. Contacts
   6. To do
 
-1. Preparing your machine
+Preparing your machine
 ===============
 
 1.1. Installing Visual Studio
@@ -49,7 +49,7 @@ Table of Contents
    
    Install-Package SpecFlow
    
-   2. Elevator Kata
+Elevator Kata
 ===============
 
 You company is looking to build a software for their high tech elevator. You have been assigned to write the program based on specifications written by your colleagues. The expected behaviour of the elevator is as following:
@@ -81,7 +81,7 @@ Examples:
 	When the elevator operates
 	Then the elevator opens doors respectively on -1, 2, 3, 6 floors
 	
-   3. Understanding the solution
+Understanding the solution
 ===============
 
 - UseElevatorV1: Create your first feature, generate the steps and check if the test runs ok.
@@ -92,7 +92,7 @@ Examples:
 - TBD: SpecFlow has hooks (methods can be executed before/after a scenario/feature)
 - TBD: DataSharing in specFlow can be done through 3 ways: Instance fields, scenario context and dependency injection
 
-   4. Licensing
+Licensing
 ===============
 
 Elevator KataBDD is licensed under a Creative Commons Attribution 3.0 Unported License.
@@ -101,12 +101,12 @@ Elevator KataBDD is licensed under a Creative Commons Attribution 3.0 Unported L
 
 To view a copy of this license, visit [ http://creativecommons.org/licenses/by/3.0/deed.en_US ].
 
-   5. Contacts
+Contacts
 ===============
 
 Bilel Msekni (msekni.bilel@gmail.com)
 
-   6. To do
+To do
 ===============
 
 Do the BDD in other languages such as Java ...
